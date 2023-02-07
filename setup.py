@@ -60,7 +60,7 @@ def get_extensions():
 
     extension = CppExtension
 
-    extra_compile_args = {"cxx": []}
+    extra_compile_args = {"cxx": ["-v"]}
     define_macros = []
 
     if (torch.cuda.is_available() and ((CUDA_HOME is not None) or is_rocm_pytorch)) or os.getenv(
